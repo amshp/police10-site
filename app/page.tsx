@@ -2,17 +2,7 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-100">
-      {/* Header */}
-      <header className="w-full bg-white shadow-sm py-4 px-6 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-blue-700">دفتر پلیس +۱۰</h1>
-        <nav className="flex gap-6 text-gray-700">
-          <a href="#" className="hover:text-blue-600">خدمات</a>
-          <a href="#" className="hover:text-blue-600">سوالات متداول</a>
-          <a href="#" className="hover:text-blue-600">چت‌بات</a>
-          <a href="#" className="hover:text-blue-600">تماس با ما</a>
-        </nav>
-      </header>
-
+     
       {/* Hero Section */}
      export default function Hero() 
     <section className="bg-gradient-to-b from-green-600 to-green-400 text-white py-20 px-6">
