@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="max-w-6xl mx-auto flex items-center justify-between px-6">
 
             {/* لوگو */}
-            <h1 className="text-2xl font-bold">Police10+</h1>
+            <h1 className="text-2xl font-bold">Police+10</h1>
 
             {/* منوی دسکتاپ */}
             <ul className="hidden md:flex gap-8 text-lg">
