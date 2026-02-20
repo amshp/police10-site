@@ -1,69 +1,58 @@
+"use client";
+
 import "./globals.css";
-import { FaBars } from "react-icons/fa";
 import { useState } from "react";
+import { FaBars } from "react-icons/fa";
 
 export const metadata = {
-  title: "Police10",
-  description: "Police10 Services Website",
+  title: "Police+10",
+  description: "Official Police+10 Services Website",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const [open, setOpen] = useState(false);
+
   return (
     <html lang="fa" dir="rtl">
       <body className="bg-gray-100">
 
         {/* Navbar */}
-        <nav className="bg-gradient-to-r from-green-700 to-green-600 text-white py-4 shadow-lg backdrop-blur-md sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto flex items-center justify-between px-6">
+        <header className="bg-green-600 text-white shadow-md sticky top-0 z-50">
+          <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
 
-            {/* لوگو */}
-            <h1 className="text-3xl font-extrabold tracking-wide">
-              Police10<span className="text-green-300">+</span>
+            {/* Logo */}
+            <h1 className="text-2xl font-extrabold tracking-wide">
+              police+10
             </h1>
 
-            {/* منوی دسکتاپ */}
+            {/* Desktop Menu */}
             <ul className="hidden md:flex gap-10 text-lg font-medium">
-              <li className="hover:text-green-200 transition cursor-pointer">خدمات</li>
-              <li className="hover:text-green-200 transition cursor-pointer">نوبت‌دهی</li>
-              <li className="hover:text-green-200 transition cursor-pointer">درباره ما</li>
-              <li className="hover:text-green-200 transition cursor-pointer">تماس با ما</li>
+              <li className="hover:text-green-200 cursor-pointer">درباره ما</li>
+              <li className="hover:text-green-200 cursor-pointer">خدمات</li>
+              <li className="hover:text-green-200 cursor-pointer">چت‌بات</li>
             </ul>
 
-            {/* منوی موبایل */}
-            <MobileMenu />
+            {/* Mobile Menu Button */}
+            <FaBars
+              className="text-3xl cursor-pointer md:hidden"
+              onClick={() => setOpen(!open)}
+            />
           </div>
-        </nav>
 
-        {/* محتوای صفحات */}
+          {/* Mobile Menu */}
+          {open && (
+            <div className="md:hidden bg-white text-green-700 shadow-lg py-4 px-6 animate-slideDown">
+              <ul className="flex flex-col gap-4 text-lg">
+                <li className="hover:text-green-500 cursor-pointer">درباره ما</li>
+                <li className="hover:text-green-500 cursor-pointer">خدمات</li>
+                <li className="hover:text-green-500 cursor-pointer">چت‌بات</li>
+              </ul>
+            </div>
+          )}
+        </header>
+
         <main>{children}</main>
-
       </body>
     </html>
-  );
-}
-
-/* ------------------ کامپوننت منوی موبایل ------------------ */
-function MobileMenu() {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className="md:hidden relative">
-      <FaBars
-        className="text-3xl cursor-pointer"
-        onClick={() => setOpen(!open)}
-      />
-
-      {/* منوی بازشو */}
-      {open && (
-        <div className="absolute right-0 mt-4 bg-white text-green-700 shadow-xl rounded-lg w-48 py-4 animate-slideDown">
-          <ul className="flex flex-col gap-4 px-4 text-lg">
-            <li className="hover:text-green-500 cursor-pointer">خدمات</li>
-            <li className="hover:text-green-500 cursor-pointer">نوبت‌دهی</li>
-            <li className="hover:text-green-500 cursor-pointer">درباره ما</li>
-            <li className="hover:text-green-500 cursor-pointer">تماس با ما</li>
-          </ul>
-        </div>
-      )}
-    </div>
   );
 }
