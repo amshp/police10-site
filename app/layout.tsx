@@ -4,11 +4,6 @@ import "./globals.css";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 
-export const metadata = {
-  title: "Police+10",
-  description: "Official Police+10 Services Website",
-};
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
 
