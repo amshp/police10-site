@@ -9,7 +9,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="fa" dir="rtl">
-      <body className="bg-gray-100">
+      <body className="bg-white">
 
         {/* Navbar */}
         <header className="bg-green-600 text-white shadow-md sticky top-0 z-50">

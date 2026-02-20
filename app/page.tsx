@@ -9,27 +9,7 @@ export default function Home() {
           در این بخش می‌توانید اخبار، تصاویر و اطلاعیه‌های مهم دفتر را قرار دهید.
         </p>
       </section>
-<footer className="bg-green-700 text-white mt-16 py-8">
-  <div className="max-w-5xl mx-auto px-6">
 
-    <h3 className="text-xl font-bold mb-4">راه‌های ارتباطی دفتر</h3>
-
-    <div className="space-y-2 text-lg">
-      <p>شماره تماس: 0912xxxxxxx</p>
-      <p>شماره ثابت: 021-xxxxxxx</p>
-    </div>
-
-    <div className="mt-4">
-      <a
-        href="#"
-        className="text-green-200 underline hover:text-white transition"
-      >
-        صفحه اینستاگرام دفتر
-      </a>
-    </div>
-
-  </div>
-</footer>
       {/* Services Section */}
       <section>
         <h2 className="text-2xl font-bold text-green-700 mb-6">خدمات دفتر</h2>
@@ -56,6 +36,28 @@ export default function Home() {
 
         </div>
       </section>
+      <footer className="bg-green-700 text-white mt-16 py-8">
+  <div className="max-w-5xl mx-auto px-6">
+
+    <h3 className="text-xl font-bold mb-4">راه‌های ارتباطی دفتر</h3>
+
+    <div className="space-y-2 text-lg">
+      <p>شماره تماس: 0912xxxxxxx</p>
+      <p>شماره ثابت: 021-xxxxxxx</p>
     </div>
+
+    <div className="mt-4">
+      <a
+        href="#"
+        className="text-green-200 underline hover:text-white transition"
+      >
+        صفحه اینستاگرام دفتر
+      </a>
+    </div>
+
+  </div>
+</footer>
+    </div>
+    
   );
 }
